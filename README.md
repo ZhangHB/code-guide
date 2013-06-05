@@ -1,31 +1,30 @@
-# HTML 和 CSS 代码编写指南
-Standards for developing flexible, durable, and sustainable HTML and CSS.
-
+# HTML 和 CSS 代码儿编写指南
+灵活、靠谱儿、容易维护的 HTML 和 CSS 开发标准
 
 
 ----------
 
 
 
-## Table of contents
+## 目录
 
-* [Golden rule](#golden-rule)
+* [指导原则](#golden-rule)
 * [HTML](#html)
-  * [Syntax](#html-syntax)
+  * [语法](#html-syntax)
   * [HTML5 doctype](#html5-doctype)
-  * [Pragmatism over semantics](#pragmatism-over-semantics)
-  * [Attribute order](#attribute-order)
-  * [JavaScript generated markup](#javascript-generated markup)
+  * [实用性大于语义化](#pragmatism-over-semantics)
+  * [属性的先后顺序](#attribute-order)
+  * [用 JS 创建的 html 结构](#javascript-generated markup)
 * [CSS](#css)
-  * [CSS syntax](#css-syntax)
+  * [CSS 语法](#css-syntax)
   * [Declaration order](#declaration-order)
   * [Formatting exceptions](#formatting-exceptions)
     * [Prefixed properties](#prefixed-properties)
     * [Rules with single declarations](#rules-with-single-declarations)
-  * [Human readable](#human-readable)
-    * [Comments](#comments)
-    * [Classes](#classes)
-    * [Selectors](#selectors)
+  * [可读性](#human-readable)
+    * [关于注释](#comments)
+    * [关于类](#classes)
+    * [关于选择器](#selectors)
   * [Organization](#organization)
 * [Writing copy](#copy)
   * [Sentence case](#sentence-case)
@@ -36,9 +35,9 @@ Standards for developing flexible, durable, and sustainable HTML and CSS.
 
 
 
-## Golden rule
+## 指导原则
 
-> All code in any code base should look like a single person typed it, no matter how many people contributed.
+> 甭管多少人一块儿干活儿, 写出来的代码儿都得跟一个人儿写的似的.
 
 This means strictly enforcing these agreed upon guidelines at all times. For additions or contributions, please [file an issue on GitHub](https://github.com/mdo/code-guide).
 
@@ -51,14 +50,14 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 ## HTML
 
 
-### HTML syntax
+### HTML 语法
 
-* Use soft-tabs with two spaces
-* Nested elements should be indented once (2 spaces)
-* Always use double quotes, never single quotes
-* Don't include a trailing slash in self-closing elements
+* 用两个空格儿当缩进
+* 嵌套所有的元素
+* 始终都用双引号, 别用单引号
+* 自结束的元素(比如 `<img>` `<hr>` 什么的)就别跟结尾写加 `/` 了
 
-**Incorrect example:**
+**这么写不太理想:**
 
 ````html
 <!DOCTYPE html>
@@ -73,7 +72,7 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 </html>
 ````
 
-**Correct example:**
+**这么写更好点儿:**
 
 ````html
 <!DOCTYPE html>
