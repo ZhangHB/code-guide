@@ -53,7 +53,7 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 ### HTML 语法
 
 * 用两个空格儿当缩进
-* 嵌套所有的元素
+* 用缩进嵌套所有的元素
 * 始终都用双引号, 别用单引号
 * 自结束的元素(比如 `<img>` `<hr>` 什么的)就别跟结尾写加 `/` 了
 
