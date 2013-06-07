@@ -11,7 +11,7 @@
 * [指导原则](#golden-rule)
 * [HTML](#html)
   * [语法](#html-syntax)
-  * [HTML5 doctype](#html5-doctype)
+  * [HTML5 的文档类型](#html5-doctype)
   * [实用性大于语义化](#pragmatism-over-semantics)
   * [属性的先后顺序](#attribute-order)
   * [用 JS 创建的 html 结构](#javascript-generated markup)
@@ -88,21 +88,21 @@ This means strictly enforcing these agreed upon guidelines at all times. For add
 ````
 
 
-### HTML5 doctype
+### HTML5 的文档类型(Doctype)
 
-Enforce standards mode in every browser possible with this simple doctype at the beginning of every HTML page.
+Html5 的文档类型声明很简短，它可以用在任何 html 文档的头部，并且可以强制任何浏览器使用标准模式渲染 html 文档。
 
 ````html
 <!DOCTYPE html>
 ````
 
 
-### Pragmatism over semantics
+### 实用性大于语义化
 
 Strive to maintain HTML standards and semantics, but don't sacrifice pragmatism. Use the least amount of markup with the fewest intricacies whenever possible.
 
 
-### Attribute order
+### 属性的先后顺序
 
 HTML attributes should come in this particular order for easier reading of code.
 
@@ -117,7 +117,7 @@ Such that your markup looks like:
 <a class="" id="" data-modal="" href="">Example link</a>
 ````
 
-### JavaScript generated markup
+### 用 JS 创建的 html 结构
 
 Writing markup in a javascript file makes the content harder to find, harder to edit, and less performant. Don't do it.
 
@@ -129,23 +129,23 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 
 ## CSS
 
-### CSS syntax
+### CSS 语法
 
-* Use soft-tabs with two spaces
-* When grouping selectors, keep individual selectors to a single line
-* Include one space before the opening brace of declaration blocks
-* Place closing braces of declaration blocks on a new line
-* Include one space after <code>:</code> in each property
-* Each declaration should appear on its own line
-* End all declarations with a semi-colon
-* Comma-separated values should include a space after each comma
-* Don't include spaces after commas in RGB or RGBa colors, and don't preface values with a leading zero
-* Lowercase all hex values, e.g., <code>#fff</code> instead of <code>#FFF</code>
-* Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>
-* Quote attribute values in selectors, e.g., <code>input[type="text"]</code>
-* Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>
+* 用两个空格儿当缩进
+* 使用组选择器的时候，确保每个选择器在单独的一行
+* 在样式声明的大括号之前， 保留一个空格儿
+* 把样式声明结束部分的大括号放在单独的一行
+* 在每一个属性的冒号后边也保留一个空格儿
+* 每一个样式声明都应该出现在他们所在的那行里
+* 在每一个样式声明后边儿都写上分号儿
+* 用逗号分隔的值，每一个逗号后边也要跟一个空格儿
+* 但是在 RGB 或者 RGBA 的颜色值里，逗号后边儿就别加空格儿了。另外浮点值小数点儿前边儿的 0 也可以省略掉
+* 小写所有的十六进制的颜色值，比如说，用 <code>#fff</code>  替换 <code>#FFF</code>
+* 尽量简写十六进制的颜色值，比如，用 <code>#fff</code> 代替 <code>#ffffff</code>
+* 属性选择器的属性值都得加上引号，比如, <code>input[type="text"]</code>
+* 值为 0 的时候，就别写单位了，比如, <code>margin: 0px;</code> 应该写成 <code>margin: 0;</code>
 
-**Incorrect example:**
+**这么写不太理想:**
 
 ````css
 .selector, .selector-secondary, .selector[type=text] {
@@ -156,7 +156,7 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 }
 ````
 
-**Correct example:**
+**这么写就好多了:**
 
 ````css
 .selector,
@@ -169,16 +169,16 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 }
 ````
 
-Questions on the terms used here? See the [syntax section of the Cascading Style Sheets article](http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax) on Wikipedia.
+有不理解的术语？看看维基百科上关于 [层叠样式表的语法部分](http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax) 的描述。
 
 
-### Declaration order
+### 样式声明的书写顺序
 
 Related declarations should be grouped together, placing positioning and box-model properties closest to the top, followed by typographic and visual properties.
 
 ````css
 .declaration-order {
-  /* Positioning */
+  /* 关于定位的 */
   position: absolute;
   top: 0;
   right: 0;
@@ -186,24 +186,24 @@ Related declarations should be grouped together, placing positioning and box-mod
   left: 0;
   z-index: 100;
 
-  /* Box-model */
+  /* 关于盒模型 */
   display: block;
   float: right;
   width: 100px;
   height: 100px;
 
-  /* Typography */
+  /* 关于文字排版 */
   font: normal 13px "Helvetica Neue", sans-serif;
   line-height: 1.5;
   color: #333;
   text-align: center;
 
-  /* Visual */
+  /* 视觉样式 */
   background-color: #f5f5f5;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 
-  /* Misc */
+  /* 杂项 */
   opacity: 1;
 }
 ````
@@ -211,7 +211,7 @@ Related declarations should be grouped together, placing positioning and box-mod
 For a complete list of properties and their order, please see [Recess](http://twitter.github.com/recess).
 
 
-### Formatting exceptions
+### 某些特殊的书写格式
 
 In some cases, it makes sense to deviate slightly from the default [syntax](#css-syntax).
 
