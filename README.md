@@ -17,7 +17,7 @@
   * [用 JS 创建的 html 结构](#javascript-generated markup)
 * [CSS](#css)
   * [CSS 语法](#css-syntax)
-  * [Declaration order](#declaration-order)
+  * [样式声明的先后顺序](#declaration-order)
   * [Formatting exceptions](#formatting-exceptions)
     * [Prefixed properties](#prefixed-properties)
     * [Rules with single declarations](#rules-with-single-declarations)
@@ -215,9 +215,10 @@ For a complete list of properties and their order, please see [Recess](http://tw
 
 In some cases, it makes sense to deviate slightly from the default [syntax](#css-syntax).
 
-#### Prefixed properties
+#### 带前缀的属性
 
 When using vendor prefixed properties, indent each property such that the value lines up vertically for easy multi-line editing.
+当书写那些私有属性的时候，
 
 ````css
 .selector {
@@ -229,7 +230,7 @@ When using vendor prefixed properties, indent each property such that the value 
 
 In Textmate, use **Text &rarr; Edit Each Line in Selection** (&#8963;&#8984;A). In Sublime Text 2, use **Selection &rarr; Add Previous Line** (&#8963;&#8679;&uarr;) and **Selection &rarr;  Add Next Line** (&#8963;&#8679;&darr;).
 
-#### Rules with single declarations
+#### 单个儿样式声明的书写规则
 
 In instances where several rules are present with only one declaration each, consider removing new line breaks for readability and faster editing.
 
@@ -250,15 +251,15 @@ In instances where several rules are present with only one declaration each, con
 ````
 
 
-### Human readable
+### 确保良好的可读性
 
-Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others.
+代码儿这东西，是由开发者编写并维护的。所以得确保你的代码儿有良好的可读性，添加描述性强的注释能让别的开发者更容易看的明白。
 
-#### Comments
+#### 关于注释
 
-Great code comments convey context or purpose and should not just reiterate a component or class name.
+仅仅干巴巴的描述类名或组件名称的注释不是好注释，好的注释应该能传达给阅读者更多的信息，比如描述组件的上下文结构、说明某些样式规则的目的等等。
 
-**Bad example:**
+**不好的注释，干巴巴的就写了一个组件的名称:**
 
 ````css
 /* Modal header */
@@ -267,7 +268,7 @@ Great code comments convey context or purpose and should not just reiterate a co
 }
 ````
 
-**Good example:**
+**更好的写法，还描述了一下儿组件的内部结构:**
 
 ````css
 /* Wrapping element for .modal-title and .modal-close */
@@ -276,11 +277,11 @@ Great code comments convey context or purpose and should not just reiterate a co
 }
 ````
 
-#### Class names
+#### 类名
 
-* Keep classes lowercase and use dashes (not underscores or camelCase)
-* Avoid arbitrary shorthand notation
-* Keep classes as short and succinct as possible
+* 始终用小写字母和连接符（就是减号儿 "-"）编写类名，别用下划线和驼峰写法
+* 避免各种胡乱的缩写简写什么的
+* 尽可能的让类名短小精悍言简意赅简单明了
 * Use meaningful names; use structural or purposeful names over presentational
 * Prefix classes based on the closest parent component's base class
 
