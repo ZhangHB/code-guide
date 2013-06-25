@@ -174,7 +174,7 @@ Writing markup in a javascript file makes the content harder to find, harder to 
 
 ### 样式声明的书写顺序
 
-Related declarations should be grouped together, placing positioning and box-model properties closest to the top, followed by typographic and visual properties.
+按照声明的用途进行分组, 把用来定位的声明, 和关于盒模型的声明放在最前边, 后边紧接着写关于文字排版的声明, 用来呈现视觉的声明放在最后边.
 
 ````css
 .declaration-order {
@@ -208,12 +208,13 @@ Related declarations should be grouped together, placing positioning and box-mod
 }
 ````
 
-For a complete list of properties and their order, please see [Recess](http://twitter.github.com/recess).
+想了解完整的例子, please see [Recess](http://twitter.github.com/recess).
 
 
 ### 某些特殊的书写格式
 
 In some cases, it makes sense to deviate slightly from the default [syntax](#css-syntax).
+在某些情况下, 某些样式声明跟默认语法有些出入
 
 #### 带前缀的属性
 
@@ -301,9 +302,9 @@ In instances where several rules are present with only one declaration each, con
 .tweet-header { ... }
 ````
 
-#### Selectors
+#### 选择器
 
-* Use classes over generic element tags
+* 用类选择器(Use classes over generic element tags)
 * Keep them short and limit the number of elements in each selector to three
 * Scope classes to the closest parent when necessary (e.g., when not using prefixed classes)
 
